@@ -30,5 +30,9 @@ Generalize the rendezvous solution to run several threads (not only two). The sy
 
 #### Reusable barrier 
 
-Often a set of cooperating 
+Often a set of cooperating threads will perform a series of steps in a loop and synchronize at a barrier after each step. For this application we need a reusable barrier that locks itself after all the threads have passsed through. 
+
+#### Queue
+
+Semaphores can also be used to represent a queue. In this case, the initial value is 0, and usually the code is written so that it's not possible to signal unless there is a thread waiting, so the value of the semaphore is never positive. 
 
