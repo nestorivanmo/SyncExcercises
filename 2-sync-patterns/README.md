@@ -19,3 +19,7 @@ Two threads must wait for each other (rendezvous), in some point, to continue ex
 A second common use for semaphores is to enforce mutual exclusion (mutex). The mutex guarantees that only one thread accesses the shared variable at a time. 
 
 A mutex is like a token that passes from one thread to another, allowing one thread at a time to proceed. In order for a thread to access a shared variable, it has to *get* the mutex; when its done, it *releases* the mutex. Only one thread can hold the mutex at a time. 
+
+#### Multiplex
+
+This pattern allows multiple threads to run in the critical section at the same time, but it enforces an upper limit on the number of concurrent threads. No more than ```n``` threads can run in the critical section at the same time. 
