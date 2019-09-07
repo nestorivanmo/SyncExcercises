@@ -6,14 +6,12 @@ from time import sleep
 sem = Semaphore(0)
 
 def readLine(id):
-	global line
 	while True:
 		print("\nreading")
 		sem.release()
 		sleep(0.1)
 
 def writeLine(id):
-	global line 
 	while True:
 		sem.acquire()
 		print("writing")
