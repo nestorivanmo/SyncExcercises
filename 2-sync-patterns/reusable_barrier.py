@@ -18,7 +18,7 @@ def a(id):
 		print("------%d" % id) #Rendezvous 
 		with mutex:
 			count += 1
-			if count == n: 		#All threads have arrived
+			if count == 10: 		#All threads have arrived
 				sem2.acquire()	#Lock the 2nd turnstile 
 				sem.release()	#Unlock the 1st turnstile 
 		#First turnstile
