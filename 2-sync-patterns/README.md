@@ -9,3 +9,10 @@ A programming design pattern is a programming structure that tends to look like 
 #### Signaling 
 
 One thread sends a signal to another thread to indicate that something has happened. Signaling makes it possible to guarantee that a section of code in one thread will run before a section of code in anothe thread. 
+
+#### Rendezvous 
+
+Two threads must wait for each other (rendezvous), in some point, to continue execution and neither is allowed to proceed until both have arrived. 
+
+#### Mutex 
+
