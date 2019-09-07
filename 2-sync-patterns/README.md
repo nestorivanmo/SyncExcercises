@@ -23,3 +23,12 @@ A mutex is like a token that passes from one thread to another, allowing one thr
 #### Multiplex
 
 This pattern allows multiple threads to run in the critical section at the same time, but it enforces an upper limit on the number of concurrent threads. No more than ```n``` threads can run in the critical section at the same time. 
+
+#### Barrier
+
+Generalize the rendezvous solution to run several threads (not only two). The synchronization requirement is that no thread executes critical point until after all threads have executed rendezvous. 
+
+#### Reusable barrier 
+
+Often a set of cooperating 
+
